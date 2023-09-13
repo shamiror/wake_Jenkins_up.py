@@ -1,4 +1,4 @@
-
+import time
 import subprocess
 
 
@@ -10,6 +10,7 @@ def main():
     process = run_batch_script()
 
     while True:
+        time.sleep(5)
         line = process.stdout.readline().decode().strip()
         if line:
             print(line)
